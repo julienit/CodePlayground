@@ -1,0 +1,132 @@
+* {
+    margin: 14px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+body{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+h1{
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+h2{
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: small;
+    font-weight: medium;
+}
+
+.word-conatiner{
+    width: 430px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+.word-conatiner h1{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px 25px;
+    border-bottom: 1px solid #ccc;
+
+}
+.word-conatiner .content{
+    margin: 25px 25px 35px;
+
+
+}
+
+.content .input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.input input{
+    height: 57px;
+    width: 56px;
+    margin: 4px;
+    color: #1bb295;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    background-color: none;
+
+}
+
+.input input:first-child{
+    margin-left: 0;
+}
+
+.content .details{
+    margin: 20px 0 25px;
+}
+
+.details p{
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.content {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: black;
+    width: 50%;
+    margin: 0 auto;
+    align-content: center;
+    font-size: 17px;
+    padding: 15px 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.reset-button{
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 25%;
+    font-size: 17px;
+    padding: 15px 0;
+    background: #1bb295;
+    border-radius: 5px;
+}
+
+.guess-input{
+    width: 50%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.button{
+    padding: 15px 0px;
+    width: 25%;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: #1bb295;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.message{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
