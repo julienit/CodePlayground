@@ -1,0 +1,259 @@
+* {
+    margin: 14px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h1{
+    margin-top: 0 auto;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    padding: 5px;
+}
+
+h2{
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: small;
+    font-weight: medium;
+}
+
+h3{
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: small;
+    font-weight: medium;
+}
+
+.content {
+    cursor: pointer;
+    border: none;
+    color: black;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 17px;
+    padding: 80px 0;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    
+}
+
+body{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #508DFF
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.container button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 25%;
+    height: 15%;
+    font-size: 17px;
+    padding: 15px 0;
+    background: #508DFF;
+    margin-bottom: 70px;
+    border-radius: 5px;
+    transition: 0.4s ease, transform 0.4s ease ;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);;
+}
+
+.container button:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+
+}
+
+.word-conatiner{
+    width: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+.word-conatiner h1{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 20px 25px;
+    border-bottom: 1px solid #ccc;
+
+}
+.word-conatiner .content{
+    margin: 25px 25px 35px;
+
+
+}
+
+ .input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.input input{
+    height: 57px;
+    width: 56px;
+    margin: 4px;
+    color: #508DFF;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    background-color: none;
+
+}
+
+
+.details p{
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.clear-button{
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 25%;
+    height: 15%;
+    font-size: 17px;
+    padding: 15px 0;
+    background:rgb(159, 159, 159);
+    border-radius: 5px;
+}
+
+
+
+/*Guess button*/
+
+
+
+.message{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+/* Keyboard */
+.keyboard{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 3px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* Letters on keyboard */
+.button{
+    outline: none;
+    border: solid 1px black;
+    color: black;
+    width: 100%;
+    height: 75%;
+    margin: 0 auto;
+    align-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 15px 0;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    
+}
+
+.keyboard button:hover{
+    cursor: pointer;
+    background-color: #4e4eab;
+    color: white;
+    border: solid 1px #4e4eab;
+    border-radius: 2px;
+    transition: 0.4s ease, 0.4s ease ;
+    
+
+}
+
+#alphabet{
+    max-width: 900px;
+    padding: 0;
+    margin: 15px auto;
+}
+
+#alphabet::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#alphabet li{
+    float: left;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 35px;
+    height: 30px;
+    padding-top: 10px;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+#my-word{ 
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+
+#my-word li{
+    display: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 1.5px;
+
+}
+
+#mylives{
+    font-size: 1.6em;
+    text-align: center;
+    display: block;
+}
+
+
+
+
+
+
+
+
+/*Tablet View*/
+
+@media screen {
+}
+
+
+
+
