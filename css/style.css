@@ -39,19 +39,6 @@ nav ul li{
     margin-right: 30px;
 }
 
-/*.hero{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #508DFF;
-    color: white;
-    margin-bottom: 50px;
-    position: relative;
-    overflow: hidden;
-    background-color: (0,0,0.5);
-}
-
 /* Signup Form Styling */
   input[type=text] {
   width: 70%;
