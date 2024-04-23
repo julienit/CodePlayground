@@ -10,6 +10,48 @@
     margin-top: 20px;
 }
 
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin: 27px auto 0;
+    list-style-type: none;
+    padding: 20px 30px;
+    
+}
+
+ul li a{
+    text-decoration: none;
+    color: #4e4eab;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+    color: #508DFF;
+}
+
+
+nav ul li{
+    margin-right: 30px;
+}
+
+/*.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #508DFF;
+    color: white;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    background-color: (0,0,0.5);
+}
+
 /* Signup Form Styling */
   input[type=text] {
   width: 70%;
