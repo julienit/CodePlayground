@@ -12,8 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<title>Code Playground</title>
 </head>
+</head>
 
-<body>
+<body class="match-page">
 	<header>
 		<nav>
 			<ul>
@@ -23,3 +24,86 @@
                 <li class="active"><a href = "match.html">Match that Code </a></li>
 			</ul>
 		</nav>
+	</header>
+		
+		<div class="memory-game"></div>
+		<h1>Match The Code</h1>
+		<button id="start-game">Start Game</button>
+		<p id="timer">Time: 0s</p>
+		<p id="score">Moves: 0</p>
+		
+		<audio id="matchSound" src="images/correct.wav"></audio>
+		<audio id="incorrectsound" src="images/wrong.wav"></audio>
+		</div>
+
+		<body>
+			<section class="card-container">
+			  <div class="memory-card" data-framework="psuedo">
+				<img class="front-face" src="images/1.png" alt="Psuedo-Class Word" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+			  <div class="memory-card" data-framework="psuedo">
+				<img class="front-face" src="images/2.png" alt="Psuedo-Class Definition" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+		  
+			  <div class="memory-card" data-framework="html">
+				<img class="front-face" src="images/3.png" alt="HTML Word" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+			  <div class="memory-card" data-framework="html">
+				<img class="front-face" src="images/4.png" alt="HTML Definition" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+		  
+			  <div class="memory-card" data-framework="css">
+				<img class="front-face" src="images/css.png" alt="CSS Word" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+			  <div class="memory-card" data-framework="css">
+				<img class="front-face" src="images/css (2).png" alt="CSS Definition" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+		  
+			  <div class="memory-card" data-framework="selector">
+				<img class="front-face" src="images/selector.png" alt="Selector Definition" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+			  <div class="memory-card" data-framework="selector">
+				<img class="front-face" src="images/selector (2).png" alt="Selector Word" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+		  
+			  <div class="memory-card" data-framework="block">
+				<img class="front-face" src="images/block.png" alt="Block Word" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Block Definition" />
+			  </div>
+			  <div class="memory-card" data-framework="block">
+				<img class="front-face" src="images/block (2).png" alt="Block Definition" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+		  
+			  <div class="memory-card" data-framework="overflow">
+				<img class="front-face" src="images/overflow.png" alt="overflow word" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+			  <div class="memory-card" data-framework="overflow">
+				<img class="front-face" src="images/overflow (2).png" alt="overflow definition" />
+				<img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.webp" alt="Outerspace Clipart" />
+			  </div>
+			</section>
+
+			<!-- create rules for the game -->
+			<div class="rules">
+				<h2>How to Play</h2>
+					<ol>
+						<li> Click on the cards to reveal the code term and definition.</li>
+						<li> Match the code term to the correct definition.</li>
+						<li> The game is over when all the cards have been matched.</li>
+						<li> Try to match all the cards in the shortest amount of time and moves possible!</li>
+					</ol>
+			</div>
+		  
+			<script src="scripts.js"></script>
+		  </body>
+		  </html>
