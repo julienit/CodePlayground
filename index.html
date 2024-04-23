@@ -6,14 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<title>Code Playground</title>
+	<img src="images/logo.png" alt="Code Playground Logo" class="logo">
+    <title>Code Playground</title>
 </head>
 
 <body>
+    <a href="#content" class="skip">Skip to main content</a>
 	<header>
 		<nav>
 			<ul>
@@ -23,7 +25,11 @@
 				<li><a href = "match.html">Match that Code</a></li>
 			</ul>
 		</nav>
+        <div class=" text-container">
 		<h1>A Gamified Coding Experience</h1>
+        <!--<video autoplay loop muted class="intro-video">
+            <source src="images/bees.mp4" type="video/mp4"> alt="Bees bouncing around the screen"
+        </video>-->
 	</header>
 
 	<main>
@@ -33,23 +39,25 @@
         </section>
 
         <section>
-            <video controls>
-                <source src="images/CodingExplained.mp4" type="video/mp4"> alt="Monkey explaining what coding is to kids"
+            <video controls class="homepage-video">
+                <source src="images/introvideo.mp4" type="video/mp4" alt="Monkey explaining what coding is to kids">
             </video>
         </section>
 
         <h2>Featured Games</h2>
         <div class="games">
             <div class="game">
-                <img src="images/crackthecode.png" alt="Crack the Code Graphic">
+                
                 <h3>Crack the Code</h3>
                 <p>Test your coding skills by cracking the code in this fun and challenging game!</p>
+                <img src="images/crackthecode.png" alt="Crack the Code Graphic">
                 <a href="crackcode.html" class="button">Play Now</a>
             </div>
             <div class="game">
-                <img src="images/matchthecode.png" alt="Match that Code Graphic">
+                
                 <h3>Match that Code</h3>
                 <p>Match the code terms to the correct definition in this exciting memory game!</p>
+                <img src="images/matchthecode.png" alt="Match that Code Graphic">
                 <a href="Match.html" class="button">Play Now</a>
             </div>
 
@@ -71,8 +79,9 @@
                   <p>By subscribing you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
               
                   <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
                     <button type="submit" class="button">Sign Up</button>
+                    <button type="button" class="cancelbtn">Cancel</button>
+                  </div>
                   </div>
 
                 </div>
