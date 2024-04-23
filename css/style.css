@@ -114,6 +114,7 @@ button:hover {
     width: 100%;
 }
 
+/*matching game styling*/
 body.match-page {
     background-image: url('/images/matchinggamebg.png');
     /* make transparent */
