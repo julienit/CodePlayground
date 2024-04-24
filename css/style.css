@@ -57,24 +57,17 @@ body.main-page h1 {
 }
 
 .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.game img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.game h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
+    transition: box-shadow 0.3s ease;
 }
 
 .game .button {
-    display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
     background-color: #350d77;
@@ -90,7 +83,6 @@ body.main-page h1 {
     background-color: #655074;
 }
 
-/* game paragraph styling */
 .game p {
     font-size: 15px;
     color: #000000;
@@ -225,7 +217,7 @@ footer p {
 
 /*matching game styling*/
 body.match-page {
-    background-image: url('/images/matchinggamebg.png');
+    background-image: url('.../images/matchinggamebg.png');
     /* make transparent */
     background-color: rgba(255, 255, 255, 0.5);
     background-size: cover;
