@@ -42,7 +42,8 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-      float: center;
+    float: center;
+    text-align: center;
   }
 
   nav ul li {
