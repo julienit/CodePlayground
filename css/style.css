@@ -73,12 +73,8 @@ body.main-page h1 {
     font-size: 1.5em;
 }
 
-.game .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: inline-block;
-    margin-top: 10px;
+    .game .button {display: block; 
+    margin: 10px auto; 
     padding: 10px 20px;
     background-color: #350d77;
     color: white;
@@ -87,7 +83,7 @@ body.main-page h1 {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
-}
+    }
 
 .game .button:hover {
     background-color: #655074;
