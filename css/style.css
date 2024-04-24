@@ -235,7 +235,7 @@ footer p {
 
 /*matching game styling*/
 body.match-page {
-    background-image: url('/images/matchinggamebg.png');
+    background-image: url('../images/matchinggamebg.png');
     /* make transparent */
     background-color: rgba(255, 255, 255, 0.5);
     background-size: cover;
