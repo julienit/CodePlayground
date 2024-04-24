@@ -73,16 +73,20 @@ body.main-page h1 {
     font-size: 1.5em;
 }
 
-    .game .button {display: block; 
-    margin: 10px auto; 
-    padding: 10px 20px;
-    background-color: #350d77;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    .game .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 20px;
+    border: solid 4px #4e4eab;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    font-display: block;
     }
 
 .game .button:hover {
