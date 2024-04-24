@@ -332,6 +332,8 @@ body.match-page {
         text-align: center;
         align-items: center;
     }
+.rules h2{
+    color:white;
   }
 
   /* video page styling */
