@@ -39,7 +39,7 @@ video {
   }
 
 body.main-page {
-    background-image: url('/images/5502490.jpg');
+    background-image: url('../images/5502490.jpg');
     background-color: rgba(0, 0, 0, 0.5);
     background-size: cover;
     background-repeat: no-repeat;
