@@ -90,7 +90,11 @@ body.main-page h1 {
     background-color: #655074;
 }
 
-/* game paragraph styling */
+.game:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); 
+}
+
 .game p {
     font-size: 15px;
     color: #000000;
