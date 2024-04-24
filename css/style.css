@@ -50,16 +50,26 @@ body.main-page {
 body.main-page h1 {
     color: #ffffff;
 }
+
 .games {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
+.game img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
 .game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    place-items: center; /* Center content horizontally and vertically */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -273,7 +283,6 @@ body.match-page {
     transform: rotateY(180deg);
   }
 
-
   #start-game {
     background-color: #4e4eab;
     color: white;
@@ -314,6 +323,7 @@ body.match-page {
     .rules h2 {
         text-align: center;
         align-items: center;
+        color: white;
     }
 
 /* video page styling */
