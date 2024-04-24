@@ -35,6 +35,7 @@ video {
     outline: none; 
     border-radius: 10px;
     border: #6a2fc7 3px solid;
+    border:#5219ae 3px solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
 
