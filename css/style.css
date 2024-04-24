@@ -122,6 +122,7 @@ body.main-page h1 {
     margin: 0;
     padding: 0;
     list-style-type: none;
+      float: right;
   }
 
   nav ul li {
