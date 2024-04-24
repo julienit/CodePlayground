@@ -27,7 +27,44 @@
         width: auto;
         height: auto;
       }
-    
+    nav {
+        background-color: #350d77;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        border-radius: 20px;
+    }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+      float: center;
+  }
+
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  nav ul li.active a {
+    font-weight: bold;
+  }
     
     
     
