@@ -317,14 +317,15 @@ body.match-page {
     border-radius: 10px;
     width: 50%;
     margin-top: 10px;
-    
-  .rules h2 {
+  }
+
+    .rules h2 {
         text-align: center;
         align-items: center;
     }
 
-  /* video page styling */
-  .video-top {
+/* video page styling */
+.video-top {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,19 +337,12 @@ body.match-page {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-  }
+}
 
-  .video-page {
+.video-page {
     display: grid;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .video-page {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center; 
     gap: 20px;
 }
 
@@ -392,4 +386,3 @@ h2 {
     text-align: center;
     color: #000000;
 }
-  }
