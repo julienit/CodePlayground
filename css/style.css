@@ -74,6 +74,9 @@ body.main-page h1 {
 }
 
 .game .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
