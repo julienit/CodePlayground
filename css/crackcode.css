@@ -76,8 +76,8 @@ body{
 
 
 .inputs input{
-    height: 100px;
-    width: 30%px;
+    height: 10px;
+    width: 100%px;
     font-size: 30px;
     margin: 4px;
     border: 1px solid #e0e0e0;
