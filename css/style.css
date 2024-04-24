@@ -6,7 +6,7 @@
 }
  h1 {
     text-align: center;
-    color: #80b7e3;
+    color: #350d77;
     margin-top: 20px;
     margin-top: 100px;
 }
@@ -73,21 +73,18 @@ body.main-page h1 {
     font-size: 1.5em;
 }
 
-    .game .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-    border: solid 4px #4e4eab;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
+.game .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #350d77;
+    color: white;
     text-decoration: none;
-    padding-bottom: 20px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    font-display: block;
-    }
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
 .game .button:hover {
     background-color: #655074;
@@ -228,7 +225,7 @@ footer p {
 
 /*matching game styling*/
 body.match-page {
-    background-image: url('../images/matchinggamebg.png');
+    background-image: url('/images/matchinggamebg.png');
     /* make transparent */
     background-color: rgba(255, 255, 255, 0.5);
     background-size: cover;
@@ -327,7 +324,7 @@ body.match-page {
     }
   }
 
-/* video page styling */
+  /* video page styling */
   .video-top {
     display: flex;
     justify-content: center;
@@ -359,21 +356,21 @@ body.match-page {
 .video-box {
     width: 300px;
     border-radius: 10px;
-    overflow: hidden;/* Hide overflow content */
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease;
     background-color: #ffffff; 
 }
 
 .video-box:hover {
-    transform: translateY(-5px); /* Move the box slightly upwards on hover */
+    transform: translateY(-5px); 
 }
 
 .video-box video {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 10px 10px 0 0; /* Rounded corners only on the top */
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0;
 }
 
 h2 {
