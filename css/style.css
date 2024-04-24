@@ -329,12 +329,10 @@ body.match-page {
     width: 50%;
     margin-top: 10px;
     
-    h2 {
+  .rules h2 {
         text-align: center;
         align-items: center;
-    }
-.rules h2{
-    color:white;
+        color: white;
   }
 
   /* video page styling */
