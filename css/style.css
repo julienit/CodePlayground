@@ -1,16 +1,15 @@
 * {
     font-family: Poppins, sans-serif;
-    margin: 10px;
-    padding: 10px;
+    margin: 10;
+    padding: 10;
     box-sizing: border-box;
 }
-
-h1 {
+ h1 {
     text-align: center;
     color: #350d77;
-    margin-top: 100px; /* Changed to one declaration */
+    margin-top: 20px;
+    margin-top: 100px;
 }
-
 /* Index Page Styling */
 .intro h2 {
     text-align: center;
@@ -37,7 +36,7 @@ video {
     border-radius: 10px;
     border:#5219ae 3px solid;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
+  }
 
 body.main-page {
     background-image: url('../images/5502490.jpg');
@@ -51,45 +50,160 @@ body.main-page {
 body.main-page h1 {
     color: #ffffff;
 }
-
-/* Navigation Bar Styling */
-nav {
-    background-color: #350d77;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    border-radius: 20px;
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-nav ul {
+.game {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.game .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #350d77;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.game .button:hover {
+    background-color: #655074;
+}
+
+/* game paragraph styling */
+.game p {
+    font-size: 15px;
+    color: #000000;
+}
+
+/* Navigation Bar Styling */
+    nav {
+        background-color: #350d77;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        border-radius: 20px;
+    }
+
+  nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
+  }
 
-nav ul li {
+  nav ul li {
     display: inline;
-}
+  }
 
-nav ul li a {
+  nav ul li a {
     color: white;
     text-decoration: none;
     padding: 14px 20px;
     display: inline-block;
     font-weight: normal;
     text-align: left;
-}
+  }
 
-nav ul li a:hover {
+  nav ul li a:hover {
     text-decoration: underline;
+  }
+
+  nav ul li.active a {
+    font-weight: bold;
+  }
+
+/* Signup Form Styling */
+  input[type=text] {
+  width: 70%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: flex;
+  border: none;
+  background: #f1f1f1;
 }
 
-nav ul li.active a {
-    font-weight: bold;
+input[type=text]:focus {
+  border: solid 1px #4d94cf;
 }
+
+hr {
+  border: 2px solid #2174b8;
+  margin-bottom: 25px;
+}
+
+button {
+  background-color: #2174b8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:2;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #595e63;
+}
+
+.cancelbtn, .button{
+  float: left;
+  width: 20%;
+  margin-right: 10px;
+}
+
+.container {
+  padding: 16px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 50%;
+    height: 500px;  
+    margin-top: 20px;
+}
+
+.container h3 {
+    text-align: center;
+    color: #350d77;
+}
+
+.container p {
+    text-align: center;
+    color: #000000;
+}
+
 
 /* footer */
 .footer {
@@ -109,8 +223,108 @@ footer p {
     text-align: center;
 }
 
-/* video page styling */
-.video-top {
+/*matching game styling*/
+body.match-page {
+    background-image: url('/images/matchinggamebg.png');
+    /* make transparent */
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    h1 {
+      color: #ffffff;
+    }
+    }
+
+  .card-container {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    background-image: url();
+  }
+  
+  .memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+  
+  .memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #ffffff;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+
+
+  #start-game {
+    background-color: #4e4eab;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px auto;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+  }
+
+  #timer, #score {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: #bedaf6;
+    border-radius: 10px;
+    position: relative;
+    left: 42.5%;
+  }
+
+  .rules {
+    font-size: 15px;
+    font-weight: bold;
+    margin: auto;
+    padding: 10px;
+    background-color: #471aba;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
+    margin-top: 10px;
+    
+  .rules h2 {
+        text-align: center;
+        align-items: center;
+    }
+
+  /* video page styling */
+  .video-top {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,9 +336,16 @@ footer p {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-}
+  }
 
-.video-page {
+  .video-page {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .video-page {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -171,3 +392,4 @@ h2 {
     text-align: center;
     color: #000000;
 }
+  }
