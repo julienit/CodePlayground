@@ -286,3 +286,6 @@ function updateHangman() {
 
 // Start the game
 startGame();
+
+// Start the game
+startGame();
