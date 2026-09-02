@@ -1,3 +1,5 @@
+const keyboardButtons =
+    document.querySelectorAll(".keyboard button");
 const wordList = [
     {
         word: "HTML",
@@ -150,11 +152,6 @@ function guessLetter(letter, button) {
     checkWin();
     checkLoss();
 }
-
-
-// Keyboard Buttons
-const keyboardButtons =
-    document.querySelectorAll(".keyboard button");
 
 keyboardButtons.forEach(button => {
 
