@@ -339,3 +339,13 @@ body {
         width: 30px;
     }
 }
+.keyboard {
+    position: relative;
+    z-index: 10;
+}
+
+.keyboard button {
+    position: relative;
+    z-index: 11;
+    pointer-events: auto;
+}
