@@ -1,135 +1,635 @@
-<!DOCTYPE html>
+/* =========================
+   GENERAL
+========================= */
 
-<html lang="en">
+* {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<link rel="icon" href="images/favicon.ico">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
+/* =========================
+   HEADINGS
+========================= */
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+h1 {
+    text-align: center;
+    color: #350d77;
+    margin-top: 100px;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
 
-<title>Code Playground</title>
-```
+/* =========================
+   INDEX PAGE
+========================= */
 
-</head>
+.intro h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
 
-<body class="match-page">
+.intro p {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-```
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="crackcode.html">Crack the Code</a></li>
-            <li class="active"><a href="match.html">Match that Code</a></li>
-        </ul>
-    </nav>
-</header>
+body.main-page {
+    background-image: url('../images/5502490.jpg');
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-<main class="match-content">
+body.main-page h1 {
+    color: #ffffff;
+}
 
-    <h1>Match The Code</h1>
 
-    <button id="start-game">Start Game</button>
+/* =========================
+   VIDEO
+========================= */
 
-    <div class="game-info">
-        <p id="timer">Time: 0s</p>
-        <p id="score">Moves: 0</p>
-    </div>
+video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border-radius: 10px;
+    border: #5219ae 3px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    <section class="card-container">
 
-        <div class="memory-card" data-framework="psuedo">
-            <img class="front-face" src="images/1.png" alt="Psuedo-Class Word">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.png" alt="Outerspace Clipart">
-        </div>
+/* =========================
+   GAMES
+========================= */
 
-        <div class="memory-card" data-framework="psuedo">
-            <img class="front-face" src="images/2.png" alt="Psuedo-Class Definition">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.png" alt="Outerspace Clipart">
-        </div>
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
 
-        <div class="memory-card" data-framework="html">
-            <img class="front-face" src="images/3.png" alt="HTML Word">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.png" alt="Outerspace Clipart">
-        </div>
+.game {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
 
-        <div class="memory-card" data-framework="html">
-            <img class="front-face" src="images/4.png" alt="HTML Definition">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.png" alt="Outerspace Clipart">
-        </div>
+.game img {
+    width: 100%;
+    border-radius: 5px;
+}
 
-        <div class="memory-card" data-framework="css">
-            <img class="front-face" src="images/css.png" alt="CSS Word">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.png" alt="Outerspace Clipart">
-        </div>
+.game h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
 
-        <div class="memory-card" data-framework="css">
-            <img class="front-face" src="images/css (2).png" alt="CSS Definition">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26e7cfa4f4d.png" alt="Outerspace Clipart">
-        </div>
+.game p {
+    font-size: 15px;
+    color: #000000;
+}
 
-        <div class="memory-card" data-framework="selector">
-            <img class="front-face" src="images/selector.png" alt="Selector Definition">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26f4d.png" alt="Outerspace Clipart">
-        </div>
+.game .button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #350d77;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        <div class="memory-card" data-framework="selector">
-            <img class="front-face" src="images/selector (2).png" alt="Selector Word">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26f4d.png" alt="Outerspace Clipart">
-        </div>
+.game .button:hover {
+    background-color: #655074;
+}
 
-        <div class="memory-card" data-framework="block">
-            <img class="front-face" src="images/block.png" alt="Block Word">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26f4d.png" alt="Outerspace Clipart">
-        </div>
 
-        <div class="memory-card" data-framework="block">
-            <img class="front-face" src="images/block (2).png" alt="Block Definition">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26f4d.png" alt="Outerspace Clipart">
-        </div>
+/* =========================
+   NAVIGATION BAR
+========================= */
 
-        <div class="memory-card" data-framework="overflow">
-            <img class="front-face" src="images/overflow.png" alt="Overflow Word">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26f4d.png" alt="Outerspace Clipart">
-        </div>
+nav {
+    background-color: #350d77;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 20px;
+}
 
-        <div class="memory-card" data-framework="overflow">
-            <img class="front-face" src="images/overflow (2).png" alt="Overflow Definition">
-            <img class="back-face" src="images/723613bb-5c0f-4485-9a97-db3f0862ab84.53bd35548a9bf6209557e26f4d.png" alt="Outerspace Clipart">
-        </div>
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
 
-    </section>
+nav ul li {
+    display: inline;
+}
 
-    <div class="rules">
-        <h2>How to Play</h2>
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: left;
+}
 
-        <ol>
-            <li>Click on the cards to reveal the code term and definition.</li>
-            <li>Match the code term to the correct definition.</li>
-            <li>The game is over when all the cards have been matched.</li>
-            <li>Try to match all the cards in the shortest amount of time and moves possible!</li>
-        </ol>
-    </div>
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
-</main>
+nav ul li.active a {
+    font-weight: bold;
+}
 
-<audio id="matchSound" src="images/correct.wav"></audio>
-<audio id="incorrectsound" src="images/wrong.wav"></audio>
 
-<script src="js/match.js"></script>
-```
+/* =========================
+   SIGNUP FORM
+========================= */
 
-</body>
+input[type=text] {
+    width: 70%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: flex;
+    border: none;
+    background: #f1f1f1;
+}
 
-</html>
+input[type=text]:focus {
+    border: solid 1px #4d94cf;
+}
+
+hr {
+    border: 2px solid #2174b8;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: #2174b8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #595e63;
+}
+
+.cancelbtn,
+.button {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+}
+
+.container {
+    padding: 16px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 50%;
+    height: 500px;
+    margin-top: 20px;
+}
+
+.container h3 {
+    text-align: center;
+    color: #350d77;
+}
+
+.container p {
+    text-align: center;
+    color: #000000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #2174b8;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+}
+
+
+/* ==================================================
+   MATCHING GAME
+================================================== */
+
+body.match-page {
+    min-height: 100vh;
+    background-image: url('../images/matchinggamebg.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 70px;
+}
+
+body.match-page h1 {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Start button */
+
+#start-game {
+    background-color: #4e4eab;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px auto;
+    width: auto;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+
+#start-game:hover {
+    background-color: #350d77;
+}
+
+
+/* Timer and score */
+
+#timer,
+#score {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    background-color: #bedaf6;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+/* Center timer and score */
+
+body.match-page > #timer {
+    margin-left: calc(50% - 110px);
+}
+
+body.match-page > #score {
+    margin-left: 0;
+}
+
+
+/* Card container */
+
+.card-container {
+    width: 900px;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    perspective: 1000px;
+}
+
+
+/* Individual cards */
+
+.memory-card {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+
+/* Card faces */
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background: #ffffff;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    object-fit: contain;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.back-face {
+    object-fit: cover;
+}
+
+
+/* =========================
+   RULES
+========================= */
+
+.rules {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 25px auto 40px;
+    padding: 15px;
+    background-color: #471aba;
+    color: white;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 700px;
+}
+
+.rules h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.rules ol {
+    padding-left: 25px;
+}
+
+.rules li {
+    margin-bottom: 5px;
+}
+
+
+/* ==================================================
+   VIDEO PAGE
+================================================== */
+
+.video-top {
+    min-height: 100vh;
+    background-image: url('../images/kids-7462927_1280.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 80px;
+}
+
+.video-top h1 {
+    text-align: center;
+    color: #350d77;
+    margin: 20px 0 30px;
+}
+
+.video-top main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.video-top h2 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #350d77;
+    margin-bottom: 25px;
+}
+
+.video-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.video-box {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+}
+
+.video-box:hover {
+    transform: translateY(-5px);
+}
+
+.video-box video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border: none;
+    border-radius: 0;
+}
+
+.video-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #350d77;
+    margin: 15px 10px 10px;
+}
+
+.video-box p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: #000000;
+    margin: 0 15px 20px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #350d77;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .video-page {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-container {
+        width: 90%;
+    }
+
+    .memory-card {
+        height: 160px;
+    }
+
+    .rules {
+        width: 70%;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        border-radius: 0;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 12px 7px;
+        font-size: 12px;
+    }
+
+
+    /* Videos */
+
+    .video-page {
+        grid-template-columns: 1fr;
+    }
+
+    .video-top main {
+        width: 95%;
+    }
+
+    .video-box video {
+        height: 220px;
+    }
+
+
+    /* Matching game */
+
+    body.match-page {
+        padding-top: 65px;
+    }
+
+    body.match-page h1 {
+        font-size: 28px;
+    }
+
+    #timer,
+    #score {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    body.match-page > #timer {
+        margin-left: 25%;
+    }
+
+    .card-container {
+        width: 95%;
+        max-width: 95%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .memory-card {
+        height: 130px;
+    }
+
+    .front-face,
+    .back-face {
+        padding: 5px;
+    }
+
+    .rules {
+        width: 90%;
+        font-size: 13px;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media screen and (max-width: 400px) {
+
+    nav ul li a {
+        padding: 10px 5px;
+        font-size: 11px;
+    }
+
+    .memory-card {
+        height: 110px;
+    }
+
+    body.match-page > #timer {
+        margin-left: 20%;
+    }
+
+    .rules {
+        width: 95%;
+    }
+}
