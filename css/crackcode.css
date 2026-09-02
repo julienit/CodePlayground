@@ -1,143 +1,173 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-    .skip {
-        position: absolute;
-        left: -10000px;
-        top: auto;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-      }
-      @keyframes fade-in {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      .skip:focus {
-        animation: fade-in 0.5s ease-in-out;
-        position: static;
-        width: auto;
-        height: auto;
-      }
-    nav {
-        background-color: #350d77;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        border-radius: 20px;
+
+/* Skip Link */
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
     }
 
-  nav ul {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skip:focus {
+    animation: fade-in 0.5s ease-in-out;
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+
+/* Navigation */
+nav {
+    background-color: #350d77;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 20px;
+}
+
+nav ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    float: center;
     text-align: center;
-  }
+}
 
-  nav ul li {
+nav ul li {
     display: inline;
-  }
+}
 
-  nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     padding: 14px 20px;
     display: inline-block;
     font-weight: normal;
     text-align: left;
-  }
+}
 
-  nav ul li a:hover {
+nav ul li a:hover {
     text-decoration: underline;
-  }
+}
 
-  nav ul li.active a {
+nav ul li.active a {
     font-weight: bold;
-  }
-    
-    
-    
-   
-body{
+}
+
+
+/* Page */
+body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100px;
+    min-height: 100vh;
     background: #102552;
 }
 
 
-.wrapper{
-    position: relative;
+/* Background Video */
+.banner-video {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 70%;
-    background-color: white;
-    max-width: 400px;
-    margin: 80px auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px 0 #FFFFFF;
-    border: none;
-    
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.wrapper h1{
+.banner-video::-webkit-media-controls {
+    display: none;
+}
+
+
+/* Main Game Box */
+.wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    margin: 100px auto 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Heading */
+.wrapper h1 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
     padding: 20px 30px;
-    border-bottom: 1 px solid #e0e0e0;
-    color: #508DFF
+    border-bottom: 1px solid #e0e0e0;
+    color: #508DFF;
 }
 
-.wrapper .content{
+
+/* Content */
+.wrapper .content {
     margin: 25px 25px 35px;
+    padding-bottom: 30px;
 }
 
-.content .inputs{
+
+/* Letter Inputs */
+.content .inputs {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
-
-.inputs input{
-    height: 100px;
-    width: 100px;
+.inputs input {
+    height: 70px;
+    width: 70px;
     font-size: 30px;
     margin: 4px;
-    border: 1px solid #e0e0e0;
-    background-color: none;
     border: 1px solid lightgray;
+    background-color: white;
     text-align: center;
     border-radius: 5px;
     font-weight: 500;
     color: darkslateblue;
 }
 
-.content .details{
+
+/* Game Details */
+.content .details {
     margin: 20px 0 25px;
 }
 
-.details p{
+.details p {
     font-size: 19px;
     margin-bottom: 10px;
 }
 
-.content .play-again{
-    width: 25%;
+
+/* Play Again Button */
+.content .play-again {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
     text-align: center;
     padding: 15px 0;
     background-color: #4e4eab;
@@ -145,35 +175,14 @@ body{
     font-weight: 600;
     font-size: medium;
     border: none;
-    box-shadow: 0 50px 50px 0 #FFFFFF;
-    
-}
-
-.play-again:hover{
-    transform: scale(0.9);
-    transition: all 0.3s;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-
-.banner-video {
-    position: fixed;
-    width: 100%;
-    height: 400px; 
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1; 
-  }
-  
-  .banner-video::-webkit-media-controls {
-    display: none; 
-
-
+.play-again:hover {
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
   }
 
 
