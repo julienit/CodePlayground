@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
     <link rel="stylesheet" href="css/crackcode.css"/>
@@ -33,23 +33,38 @@
         </video>
     </div>
 
-    <div class="wrapper">
+    <main class="wrapper">
 
         <h1>Crack The Code</h1>
 
-        <p>Directions: Enter in letters to guess the word.</p>
+        <p class="directions">
+            Directions: Enter in letters to guess the word.
+        </p>
 
         <div class="content">
 
-            <div class="inputs">
-                <input type="text" maxlength="1">
-                <input type="text" maxlength="1">
-                <input type="text" maxlength="1">
-                <input type="text" maxlength="1">
-                <input type="text" maxlength="1">
-                <input type="text" maxlength="1">
+            <!-- Hangman Drawing -->
+            <div class="hangman">
+                <div class="gallows"></div>
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="left-arm"></div>
+                <div class="right-arm"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
             </div>
 
+            <!-- Word -->
+            <div class="word">
+                <span>_</span>
+                <span>_</span>
+                <span>_</span>
+                <span>_</span>
+                <span>_</span>
+                <span>_</span>
+            </div>
+
+            <!-- Game Details -->
             <div class="details">
 
                 <p class="hint">
@@ -69,16 +84,44 @@
 
             </div>
 
+            <!-- Letter Buttons -->
+            <div class="keyboard">
+                <button>A</button>
+                <button>B</button>
+                <button>C</button>
+                <button>D</button>
+                <button>E</button>
+                <button>F</button>
+                <button>G</button>
+                <button>H</button>
+                <button>I</button>
+                <button>J</button>
+                <button>K</button>
+                <button>L</button>
+                <button>M</button>
+                <button>N</button>
+                <button>O</button>
+                <button>P</button>
+                <button>Q</button>
+                <button>R</button>
+                <button>S</button>
+                <button>T</button>
+                <button>U</button>
+                <button>V</button>
+                <button>W</button>
+                <button>X</button>
+                <button>Y</button>
+                <button>Z</button>
+            </div>
+
             <button class="play-again">Play Again</button>
 
         </div>
 
-    </div>
+    </main>
 
     <script src="js/script.js"></script>
 
 </body>
-
-</html>
 
 </html>
