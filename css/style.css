@@ -1,7 +1,3 @@
-/* =========================
-   GENERAL
-========================= */
-
 * {
     font-family: Poppins, sans-serif;
     margin: 0;
@@ -9,21 +5,13 @@
     box-sizing: border-box;
 }
 
-
-/* =========================
-   HEADINGS
-========================= */
-
 h1 {
     text-align: center;
     color: #350d77;
     margin-top: 100px;
 }
 
-
-/* =========================
-   INDEX PAGE
-========================= */
+/* Index Page Styling */
 
 .intro h2 {
     text-align: center;
@@ -40,6 +28,18 @@ h1 {
     margin-right: auto;
 }
 
+video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border-radius: 10px;
+    border: #5219ae 3px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 body.main-page {
     background-image: url('../images/5502490.jpg');
     background-color: rgba(0, 0, 0, 0.5);
@@ -53,37 +53,10 @@ body.main-page h1 {
     color: #ffffff;
 }
 
-body.main-page video {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    outline: none;
-    border-radius: 10px;
-    border: #5219ae 3px solid;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-/* =========================
-   GAMES ON HOME PAGE
-========================= */
-
 .games {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-}
-
-.game {
-    display: grid;
-    place-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
 }
 
 .game img {
@@ -96,9 +69,14 @@ body.main-page video {
     font-size: 1.5em;
 }
 
-.game p {
-    font-size: 15px;
-    color: #000000;
+.game {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
 .game .button {
@@ -117,10 +95,13 @@ body.main-page video {
     background-color: #655074;
 }
 
+.game p {
+    font-size: 15px;
+    color: #000000;
+}
 
-/* =========================
-   NAVIGATION BAR
-========================= */
+
+/* Navigation Bar Styling */
 
 nav {
     background-color: #350d77;
@@ -162,9 +143,7 @@ nav ul li.active a {
 }
 
 
-/* =========================
-   SIGNUP FORM
-========================= */
+/* Signup Form Styling */
 
 input[type=text] {
     width: 70%;
@@ -236,9 +215,7 @@ form {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* Footer */
 
 .footer {
     background-color: #2174b8;
@@ -259,7 +236,7 @@ footer p {
 
 
 /* ==================================================
-   MATCH THAT CODE
+   MATCHING GAME
 ================================================== */
 
 body.match-page {
@@ -275,28 +252,18 @@ body.match-page {
 
 body.match-page h1 {
     color: #ffffff;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 
-/* Main game area */
-
-.match-content {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-}
-
-
-/* Start button */
+/* Start Game Button */
 
 #start-game {
     background-color: #4e4eab;
     color: white;
-    padding: 14px 25px;
-    margin: 10px auto 20px;
+    padding: 14px 20px;
+    margin: 10px auto;
     width: auto;
     border-radius: 10px;
     font-weight: bold;
@@ -309,56 +276,62 @@ body.match-page h1 {
 }
 
 
-/* Timer and score */
-
-.game-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
+/* Timer and Score */
 
 #timer,
 #score {
     font-size: 15px;
     font-weight: bold;
-    margin: 0;
-    padding: 10px 15px;
+    margin: 10px;
+    display: inline-block;
+    padding: 10px;
     background-color: #bedaf6;
     border-radius: 10px;
     position: static;
 }
 
 
-/* Card container */
+/* Put timer and score next to each other */
+
+body.match-page > #timer {
+    margin-left: 42%;
+}
+
+body.match-page > #score {
+    margin-left: 0;
+}
+
+
+/* Card Container */
 
 .card-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    width: 900px;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     perspective: 1000px;
 }
 
 
-/* Individual cards */
+/* Individual Cards */
 
 .memory-card {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    width: calc(25% - 10px);
+    height: 180px;
+    margin: 5px;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
-    transition: transform 0.5s;
+    transition: transform .5s;
     cursor: pointer;
 }
 
 .memory-card:active {
     transform: scale(0.97);
-    transition: transform 0.2s;
+    transition: transform .2s;
 }
 
 .memory-card.flip {
@@ -366,19 +339,20 @@ body.match-page h1 {
 }
 
 
-/* Card faces */
+/* Card Faces */
 
 .front-face,
 .back-face {
     width: 100%;
     height: 100%;
-    padding: 10px;
+    padding: 20px;
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #ffffff;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     object-fit: contain;
 }
 
@@ -396,13 +370,13 @@ body.match-page h1 {
 .rules {
     font-size: 15px;
     font-weight: bold;
-    margin: 30px auto 0;
-    padding: 20px;
+    margin: 20px auto 40px;
+    padding: 10px;
     background-color: #471aba;
     color: white;
     border-radius: 10px;
-    width: 100%;
-    max-width: 700px;
+    width: 50%;
+    margin-top: 10px;
 }
 
 .rules h2 {
@@ -416,7 +390,7 @@ body.match-page h1 {
 }
 
 .rules li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 
@@ -443,56 +417,43 @@ body.match-page h1 {
 .video-top main {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto 40px;
+    margin: 0 auto;
 }
-
-.video-top h2 {
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
-    color: #350d77;
-    margin-bottom: 25px;
-}
-
-
-/* Video grid */
 
 .video-page {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    justify-content: center;
+    gap: 20px;
 }
-
-
-/* Video cards */
 
 .video-box {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    background-color: #ffffff;
 }
 
 .video-box:hover {
     transform: translateY(-5px);
 }
 
-
-/* Videos */
-
 .video-box video {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    display: block;
+    border-radius: 10px 10px 0 0;
     border: none;
-    border-radius: 0;
 }
 
-
-/* Video titles */
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #350d77;
+}
 
 .video-box h3 {
     font-size: 18px;
@@ -501,9 +462,6 @@ body.match-page h1 {
     color: #350d77;
     margin: 15px 10px 10px;
 }
-
-
-/* Video descriptions */
 
 .video-box p {
     font-size: 14px;
@@ -514,18 +472,8 @@ body.match-page h1 {
 }
 
 
-/* General h2 */
-
-h2 {
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-    color: #350d77;
-}
-
-
 /* ==================================================
-   VIDEO PAGE - TABLETS
+   TABLET
 ================================================== */
 
 @media screen and (max-width: 900px) {
@@ -535,9 +483,17 @@ h2 {
     }
 
     .card-container {
-        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
     }
 
+    .memory-card {
+        width: calc(33.333% - 10px);
+        height: 160px;
+    }
+
+    .rules {
+        width: 70%;
+    }
 }
 
 
@@ -546,8 +502,6 @@ h2 {
 ================================================== */
 
 @media screen and (max-width: 600px) {
-
-    /* Navigation */
 
     nav {
         border-radius: 0;
@@ -558,12 +512,12 @@ h2 {
     }
 
     nav ul li a {
-        padding: 12px 8px;
-        font-size: 13px;
+        padding: 12px 7px;
+        font-size: 12px;
     }
 
 
-    /* Videos */
+    /* Video Page */
 
     .video-page {
         grid-template-columns: 1fr;
@@ -578,52 +532,51 @@ h2 {
     }
 
 
-    /* Match game */
+    /* Matching Game */
 
     body.match-page {
-        padding-top: 60px;
-    }
-
-    .match-content {
-        width: 95%;
+        padding-top: 65px;
     }
 
     body.match-page h1 {
         font-size: 28px;
-        margin-top: 20px;
     }
 
-    .game-info {
-        gap: 8px;
+    body.match-page > #timer {
+        margin-left: 25%;
     }
 
     #timer,
     #score {
         font-size: 13px;
-        padding: 8px 12px;
+        padding: 8px;
     }
 
     .card-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
+        width: 95%;
+        max-width: 95%;
+        margin: 20px auto;
+    }
+
+    .memory-card {
+        width: calc(33.333% - 10px);
+        height: 130px;
     }
 
     .front-face,
     .back-face {
         padding: 5px;
-        border-radius: 7px;
     }
 
     .rules {
+        width: 90%;
         font-size: 13px;
-        padding: 15px;
     }
-
 }
 
 
 /* ==================================================
-   VERY SMALL SCREENS
+   SMALL MOBILE
 ================================================== */
 
 @media screen and (max-width: 400px) {
@@ -637,13 +590,16 @@ h2 {
         font-size: 24px;
     }
 
-    .card-container {
-        gap: 5px;
+    body.match-page > #timer {
+        margin-left: 20%;
     }
 
-    .front-face,
-    .back-face {
-        padding: 3px;
+    .memory-card {
+        width: calc(50% - 10px);
+        height: 120px;
     }
 
+    .rules {
+        width: 95%;
+    }
 }
