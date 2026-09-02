@@ -389,3 +389,16 @@ h2 {
     text-align: center;
     color: #000000;
 }
+/* =========================
+   MATCH PAGE FONT
+========================= */
+
+body.match-page,
+body.match-page h1,
+body.match-page h2,
+body.match-page p,
+body.match-page button,
+body.match-page li,
+body.match-page a {
+    font-family: Poppins, sans-serif;
+}
