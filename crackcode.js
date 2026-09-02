@@ -1,3 +1,4 @@
+console.log("crackcode.js loaded");
 const keyboardButtons =
     document.querySelectorAll(".keyboard button");
 const wordList = [
