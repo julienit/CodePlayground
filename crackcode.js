@@ -1,6 +1,5 @@
 console.log("crackcode.js loaded");
-const keyboardButtons =
-    document.querySelectorAll(".keyboard button");
+
 const wordList = [
     {
         word: "HTML",
@@ -32,6 +31,11 @@ let selectedWord;
 let correctLetters = [];
 let wrongLetters = [];
 let guessesLeft = 6;
+
+
+// Keyboard Buttons
+const keyboardButtons =
+    document.querySelectorAll(".keyboard button");
 
 
 // Start Game
@@ -154,9 +158,13 @@ function guessLetter(letter, button) {
     checkLoss();
 }
 
+
+// Letter Button Clicks
 keyboardButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function () {
+
+        console.log("Clicked:", button.textContent);
 
         guessLetter(
             button.textContent,
